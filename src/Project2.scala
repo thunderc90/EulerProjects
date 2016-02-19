@@ -3,15 +3,17 @@
  */
 object Project2 {
 
-  var cache = Map[Int, Int](0->1,1->1)
+  var cache = Map[BigInt, BigInt](
+    BigInt(0)->BigInt(1),
+    BigInt(1)->BigInt(1))
 
-  def run(n: Int): Unit = {
+  def run(n: BigInt): Unit = {
     println("Project 2: " + calc(n))
   }
 
-  def calc(max: Int): Int = {
-    var fVal = 1
-    var n = 2
+  def calc(max: BigInt): BigInt = {
+    var fVal = BigInt(1)
+    var n = BigInt(2)
 
     while (fVal < max) {
       fVal = fib(n)
@@ -22,9 +24,9 @@ object Project2 {
     cache.keySet.filter(_ > 0).flatMap(cache.get(_)).filter(_ < max).filter(_ % 2 == 0).sum
   }
 
-  def fib(n: Int): Int = {
-    def fib_calc(n: Int): Int = fib_rec(n-1)+fib_rec(n-2)
-    def fib_rec(n: Int): Int = cache.get(n) match {
+  def fib(n: BigInt): BigInt = {
+    def fib_calc(n: BigInt): BigInt = fib_rec(n-1)+fib_rec(n-2)
+    def fib_rec(n: BigInt): BigInt = cache.get(n) match {
       case Some(x) => x
       case _ => {
         cache += (n -> fib_calc(n))
