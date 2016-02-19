@@ -19,7 +19,8 @@ object RunThem {
     //build list of requested projects from command line
     val projectNums: List[Int] = args.toList.flatMap(stringToInt(_))
 
-    //create list of futures that will run requested jobs, or all jobs if none were specified
+    //create list of futures that will run requested projects
+    // if no projects are requested simply run them all
     val requestedProjects = projectNums.length match {
       case 0 => projects.keySet.flatMap(projects.get(_))
       case _ => projectNums.flatMap(projects.get(_))
