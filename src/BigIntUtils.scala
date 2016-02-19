@@ -3,6 +3,9 @@
  * Created by buckl on 2/19/2016.
  */
 object BigIntUtils {
+  lazy val zero = BigInt(0)
+  lazy val one = BigInt(1)
+  lazy val two = BigInt(2)
   implicit class BigIntImprovements(val number: BigInt) {
     def sqrt = {
       val one = BigInt(1)

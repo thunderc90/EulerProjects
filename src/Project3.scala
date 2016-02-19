@@ -2,8 +2,7 @@
  * Solution for EulerProject.com's Problem 3
  * Created by buckl on 2/18/2016.
  */
-
-import BigIntUtils.BigIntImprovements
+import BigIntUtils._
 
 object Project3 {
   def run(n: BigInt): Unit = {
@@ -11,19 +10,19 @@ object Project3 {
   }
 
   def calc(n: BigInt): BigInt = {
-    (BigInt(1) to n.sqrt).filter(isFactor(_,n)).filter(isPrime).last
+    (one to n.sqrt).filter(isFactor(_,n)).filter(isPrime).last
   }
 
   def isFactor(factor: BigInt, number: BigInt): Boolean = {
-    (number % factor) == BigInt(0)
+    (number % factor) == zero
   }
 
   def isPrime(number: BigInt): Boolean = {
-    if (number <= BigInt(1))
+    if (number <= one)
       false
-    else if (number ==  BigInt(2))
+    else if (number ==  two)
       true
     else
-      !(BigInt(2) to (number-1)).exists(isFactor(_,number))
+      !(two to (number-one)).exists(isFactor(_,number))
   }
 }
