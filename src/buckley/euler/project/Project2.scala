@@ -1,15 +1,15 @@
+package buckley.euler.project
+
 /**
  * Project 2 from EulerProjects.com
  * Created by buckl on 2/18/2016.
  */
-object Project2 {
+object Project2 extends Project {
+  override def projectNum(): Int = 2
+
   var cache = Map[BigInt, BigInt](
     BigInt(0)->BigInt(1),
     BigInt(1)->BigInt(1))
-
-  def run(n: BigInt): Unit = {
-    println("Project 2: " + calc(n))
-  }
 
   def calc(max: BigInt): BigInt = {
     var fVal = BigInt(1)
