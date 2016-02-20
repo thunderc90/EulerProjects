@@ -25,5 +25,18 @@ object BigIntUtils {
       }
       n1
     }
+
+    def isFactorOf(factoree: BigInt): Boolean = {
+      (factoree % number) == zero
+    }
+
+    def isPrime = {
+      if (number <= one)
+        false
+      else if (number ==  two)
+        true
+      else
+        !(two to (number-one)).exists(_.isFactorOf(number))
+    }
   }
 }
