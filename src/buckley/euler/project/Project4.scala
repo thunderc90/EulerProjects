@@ -6,7 +6,7 @@ package buckley.euler.project
  */
 
 object Project4 extends Project {
-  override def projectNum(): Int = 1
+  override def projectNum(): Int = 4
 
   def calc(digits: BigInt): BigInt = {
     possibleSolutionsFrom(allNumbersUpTo(maxNumWithX(digits))).filter(isPalindromeNumber).max
