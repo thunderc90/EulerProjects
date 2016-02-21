@@ -26,16 +26,16 @@ object Project5 extends Project {
     multiple*value
   }
 
-  def isEvenlyDivisible(value: BigInt, scrubbedDividers: List[BigInt]): Boolean = !scrubbedDividers.map(value%_ == zero).contains(false)
+  def isEvenlyDivisible(value: BigInt, scrubbedDividers: List[BigInt]): Boolean = !scrubbedDividers.exists(value%_ != zero)
 
   def getRelevantDividers(dividers: List[BigInt]): List[BigInt] = {
-    val toBeRemoved: MutableList[BigInt] = MutableList()
+    var toBeRemoved: List[BigInt] = List()
     for {
       i: BigInt <- dividers
       j: BigInt <- dividers
     } yield {
       if ((i != j) && (i % j == zero))
-        toBeRemoved += j
+        toBeRemoved = toBeRemoved ::: List(j)
     }
     dividers.diff(toBeRemoved)
   }
