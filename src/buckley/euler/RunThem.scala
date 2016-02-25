@@ -19,7 +19,8 @@ object RunThem {
       3 -> (Project3.asInstanceOf[Project], BigInt(600851475143L)),
       4 -> (Project4.asInstanceOf[Project], BigInt(3)),
       5 -> (Project5.asInstanceOf[Project], BigInt(20)),
-      6 -> (Project6.asInstanceOf[Project], BigInt(100))
+      6 -> (Project6.asInstanceOf[Project], BigInt(100)),
+      7 -> (Project7.asInstanceOf[Project], BigInt(10001))
   )
 
   def main(args: Array[String]): Unit = {

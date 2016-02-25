@@ -8,6 +8,9 @@ object BigIntUtils {
   lazy val zero = BigInt(0)
   lazy val one = BigInt(1)
   lazy val two = BigInt(2)
+
+  var primeCheckCache = List[BigInt]()
+
   implicit class BigIntImprovements(val number: BigInt) {
     def sqrt = {
       val one = BigInt(1)
