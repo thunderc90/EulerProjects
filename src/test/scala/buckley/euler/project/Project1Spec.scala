@@ -1,5 +1,6 @@
-import buckley.euler.project.Project1
-import org.scalatest.{Matchers, FlatSpec}
+package buckley.euler.project
+
+import org.scalatest.{FlatSpec, Matchers}
 
 /**
   * Project 1 Specification
