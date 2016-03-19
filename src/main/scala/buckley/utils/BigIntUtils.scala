@@ -39,7 +39,7 @@ object BigIntUtils {
       else if (number ==  two)
         true
       else
-        !(two to (number-one)).exists(_.isFactorOf(number))
+        !(two to (number.sqrt)).exists(_.isFactorOf(number))
     }
   }
 }
