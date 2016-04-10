@@ -20,6 +20,10 @@ class BigIntUtilsSpec extends FlatSpec with Matchers {
     two should be (BigInt(2))
   }
 
+  "three" should "Be equal to BigInt(3)" in {
+    three should be (BigInt(3))
+  }
+
   "sqrt" should "return 0 given 0" in {
     BigInt(0).sqrt should be (BigInt(0))
   }

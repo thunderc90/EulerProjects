@@ -8,6 +8,7 @@ object BigIntUtils {
   lazy val zero = BigInt(0)
   lazy val one = BigInt(1)
   lazy val two = BigInt(2)
+  lazy val three = BigInt(3)
 
   var primeCheckCache = List[BigInt]()
 
