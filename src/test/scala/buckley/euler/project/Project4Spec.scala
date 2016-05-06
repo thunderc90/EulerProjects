@@ -9,9 +9,10 @@ import buckley.utils.BigIntUtils._
   */
 class Project4Spec extends FlatSpec with Matchers{
 
-  "Project4.calc" should "return None, given 0" in {
-    Project4.calc(zero) should be (BigInt(0))
-  }
+  //TODO
+//  "Project4.calc" should "return None, given 0" in {
+//    Project4.calc(zero) should be (BigInt(0))
+//  }
 
   it should "return 9009, given 2" in {
     Project4.calc(two) should be (BigInt(9009))
