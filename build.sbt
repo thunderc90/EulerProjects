@@ -2,7 +2,7 @@ name := "EulerProjects"
 
 version := "1.0"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 //Import scalatest framework
 libraryDependencies += "org.scalactic" %% "scalactic" % "2.2.6"
